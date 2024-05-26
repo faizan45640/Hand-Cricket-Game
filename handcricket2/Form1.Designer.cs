@@ -115,6 +115,7 @@
             RegisterBTN.TabIndex = 7;
             RegisterBTN.Text = "Register";
             RegisterBTN.UseVisualStyleBackColor = false;
+            RegisterBTN.Click += RegisterBTN_Click;
             // 
             // PlayAsGeustButton
             // 

@@ -33,6 +33,14 @@ namespace handcricket2
 
 
 
+
+        }
+
+        private void RegisterBTN_Click(object sender, EventArgs e)
+        {
+            RegisterUser registerUser = new RegisterUser();
+            registerUser.Show();
+            this.Hide();
         }
     }
 }
