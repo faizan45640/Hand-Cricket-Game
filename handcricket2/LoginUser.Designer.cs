@@ -1,6 +1,6 @@
 ﻿namespace handcricket2
 {
-    partial class RegisterUser
+    partial class LoginUser
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterUser));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginUser));
             label1 = new Label();
             pictureBox1 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -40,11 +40,8 @@
             label4 = new Label();
             UsernnameTXT = new TextBox();
             PasswordTXT = new TextBox();
-            MaleRdioBTN = new RadioButton();
-            FemaleRdioBTN = new RadioButton();
-            label5 = new Label();
-            RegisterBTN = new Button();
-            usernamealreadylabel = new Label();
+            LoginBTN = new Button();
+            WrongCredentials = new Label();
             MissingUsername = new PictureBox();
             MissingPassword = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -103,18 +100,18 @@
             label2.AutoSize = true;
             label2.Font = new Font("Russo One", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(30, 54, 63);
-            label2.Location = new Point(245, 185);
+            label2.Location = new Point(260, 185);
             label2.Name = "label2";
-            label2.Size = new Size(197, 25);
+            label2.Size = new Size(164, 25);
             label2.TabIndex = 14;
-            label2.Text = "Register Account";
+            label2.Text = "Login Account";
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = Properties.Resources._1714809557199037201;
+            pictureBox2.Image = Properties.Resources.loginicon_removebg_preview__1_;
             pictureBox2.Location = new Point(211, 179);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(33, 34);
+            pictureBox2.Size = new Size(43, 31);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
@@ -122,9 +119,9 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(30, 54, 63);
-            panel2.Location = new Point(445, 195);
+            panel2.Location = new Point(440, 195);
             panel2.Name = "panel2";
-            panel2.Size = new Size(150, 2);
+            panel2.Size = new Size(160, 2);
             panel2.TabIndex = 16;
             // 
             // label3
@@ -174,69 +171,32 @@
             PasswordTXT.UseSystemPasswordChar = true;
             PasswordTXT.TextChanged += PasswordTXT_TextChanged;
             // 
-            // MaleRdioBTN
+            // LoginBTN
             // 
-            MaleRdioBTN.AutoSize = true;
-            MaleRdioBTN.Font = new Font("Russo One", 11.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MaleRdioBTN.ForeColor = Color.FromArgb(30, 54, 63);
-            MaleRdioBTN.Location = new Point(329, 348);
-            MaleRdioBTN.Name = "MaleRdioBTN";
-            MaleRdioBTN.Size = new Size(62, 22);
-            MaleRdioBTN.TabIndex = 21;
-            MaleRdioBTN.TabStop = true;
-            MaleRdioBTN.Text = "Male";
-            MaleRdioBTN.UseVisualStyleBackColor = true;
+            LoginBTN.BackColor = Color.FromArgb(255, 142, 50);
+            LoginBTN.FlatAppearance.BorderSize = 0;
+            LoginBTN.FlatStyle = FlatStyle.Popup;
+            LoginBTN.Font = new Font("Russo One", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LoginBTN.ForeColor = Color.FromArgb(30, 54, 63);
+            LoginBTN.Location = new Point(276, 418);
+            LoginBTN.Name = "LoginBTN";
+            LoginBTN.Size = new Size(147, 35);
+            LoginBTN.TabIndex = 24;
+            LoginBTN.Text = "Login";
+            LoginBTN.UseVisualStyleBackColor = false;
+            LoginBTN.Click += RegisterBTN_Click;
             // 
-            // FemaleRdioBTN
+            // WrongCredentials
             // 
-            FemaleRdioBTN.AutoSize = true;
-            FemaleRdioBTN.Font = new Font("Russo One", 11.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FemaleRdioBTN.ForeColor = Color.FromArgb(30, 54, 63);
-            FemaleRdioBTN.Location = new Point(414, 348);
-            FemaleRdioBTN.Name = "FemaleRdioBTN";
-            FemaleRdioBTN.Size = new Size(80, 22);
-            FemaleRdioBTN.TabIndex = 22;
-            FemaleRdioBTN.TabStop = true;
-            FemaleRdioBTN.Text = "Female";
-            FemaleRdioBTN.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Russo One", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.FromArgb(30, 54, 63);
-            label5.Location = new Point(179, 345);
-            label5.Name = "label5";
-            label5.Size = new Size(89, 25);
-            label5.TabIndex = 23;
-            label5.Text = "Gender";
-            // 
-            // RegisterBTN
-            // 
-            RegisterBTN.BackColor = Color.FromArgb(255, 142, 50);
-            RegisterBTN.FlatAppearance.BorderSize = 0;
-            RegisterBTN.FlatStyle = FlatStyle.Popup;
-            RegisterBTN.Font = new Font("Russo One", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            RegisterBTN.ForeColor = Color.FromArgb(30, 54, 63);
-            RegisterBTN.Location = new Point(276, 418);
-            RegisterBTN.Name = "RegisterBTN";
-            RegisterBTN.Size = new Size(147, 35);
-            RegisterBTN.TabIndex = 24;
-            RegisterBTN.Text = "Register";
-            RegisterBTN.UseVisualStyleBackColor = false;
-            RegisterBTN.Click += RegisterBTN_Click;
-            // 
-            // usernamealreadylabel
-            // 
-            usernamealreadylabel.AutoSize = true;
-            usernamealreadylabel.Font = new Font("Russo One", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            usernamealreadylabel.ForeColor = Color.FromArgb(30, 54, 63);
-            usernamealreadylabel.Location = new Point(265, 399);
-            usernamealreadylabel.Name = "usernamealreadylabel";
-            usernamealreadylabel.Size = new Size(177, 16);
-            usernamealreadylabel.TabIndex = 25;
-            usernamealreadylabel.Text = "Username already exists!";
-            usernamealreadylabel.Visible = false;
+            WrongCredentials.AutoSize = true;
+            WrongCredentials.Font = new Font("Russo One", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            WrongCredentials.ForeColor = Color.FromArgb(30, 54, 63);
+            WrongCredentials.Location = new Point(285, 399);
+            WrongCredentials.Name = "WrongCredentials";
+            WrongCredentials.Size = new Size(130, 16);
+            WrongCredentials.TabIndex = 25;
+            WrongCredentials.Text = "Wrong Credentials";
+            WrongCredentials.Visible = false;
             // 
             // MissingUsername
             // 
@@ -272,7 +232,7 @@
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
-            // RegisterUser
+            // LoginUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -281,11 +241,8 @@
             Controls.Add(pictureBox3);
             Controls.Add(MissingPassword);
             Controls.Add(MissingUsername);
-            Controls.Add(usernamealreadylabel);
-            Controls.Add(RegisterBTN);
-            Controls.Add(label5);
-            Controls.Add(FemaleRdioBTN);
-            Controls.Add(MaleRdioBTN);
+            Controls.Add(WrongCredentials);
+            Controls.Add(LoginBTN);
             Controls.Add(PasswordTXT);
             Controls.Add(UsernnameTXT);
             Controls.Add(label4);
@@ -298,7 +255,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "RegisterUser";
+            Name = "LoginUser";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Hand Cricket";
             Load += RegisterUser_Load;
@@ -328,8 +285,8 @@
         private RadioButton MaleRdioBTN;
         private RadioButton FemaleRdioBTN;
         private Label label5;
-        private Button RegisterBTN;
-        private Label usernamealreadylabel;
+        private Button LoginBTN;
+        private Label WrongCredentials;
         private PictureBox MissingUsername;
         private PictureBox MissingPassword;
         private PictureBox pictureBox3;

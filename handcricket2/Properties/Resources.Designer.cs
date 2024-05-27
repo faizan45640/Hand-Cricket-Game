@@ -93,6 +93,26 @@ namespace handcricket2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _171682035461818921_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("171682035461818921-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backawwor {
+            get {
+                object obj = ResourceManager.GetObject("backawwor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loginicon {
             get {
                 object obj = ResourceManager.GetObject("loginicon", resourceCulture);

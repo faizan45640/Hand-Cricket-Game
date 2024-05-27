@@ -3,9 +3,9 @@ using System.Data.SqlClient;
 
 namespace handcricket2
 {
-    public partial class RegisterUser : Form
+    public partial class LoginUser : Form
     {
-        public RegisterUser()
+        public LoginUser()
         {
             InitializeComponent();
         }
@@ -44,7 +44,7 @@ namespace handcricket2
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            usernamealreadylabel.Visible = false;
+            WrongCredentials.Visible = false;
             MissingUsername.Visible = false;
         }
 
@@ -58,20 +58,14 @@ namespace handcricket2
             //insert data
             string username = UsernnameTXT.Text;
             string password = PasswordTXT.Text;
-            string gender;
-            if (MaleRdioBTN.Checked)
-            {
-                gender = "Male";
-            }
-            else
-            {
-                gender = "Female";
-            }
+            
+            
             if (username == "" || password == "")
             {
                 if (username == "")
                 {
                     MissingUsername.Visible = true;
+                    
 
                 }
                 if (password == "")
@@ -80,22 +74,25 @@ namespace handcricket2
                 }
                 return;
             }
-            //check for already existing username
-            string query = "select * from Player where userName='" + username + "'";
+            
+           //verify credentials
+           string query = "select * from Player where userName='" + username + "' and password='" + password + "'";
             SqlCommand command = new SqlCommand(query, connection);
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Read())
             {
-                usernamealreadylabel.Visible = true;
-                return;
+                //OPEN MAIN FORM
+              //  Main f = new Main();
+              //  f.Show();
+              //  this.Hide();
+              MessageBox.Show("Login Successful");
+                //open main screen
             }
-            connection.Close();
-            connection.Open();
-            query = "insert into Player(userName,password,gender) VALUES('" + username + "','" + password + "','" + gender + "')";
-            command = new SqlCommand(query, connection);
-            command.ExecuteNonQuery();
-            connection.Close();
-            MessageBox.Show("User Registered Successfully");
+            else
+            {
+                //show error
+                WrongCredentials.Visible = true;
+            }
 
 
             //OPEN LOGIN form

@@ -11,6 +11,9 @@ namespace handcricket2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            LoginUser loginUser = new LoginUser();
+            loginUser.Show();
+            this.Hide();
 
         }
 
